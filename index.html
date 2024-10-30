@@ -8,21 +8,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 p-4">
+<body class="bg-gray-100 pt-4">
 
     <div class="max-w-4xl mx-auto w-4/5">
-        <h1 class="text-2xl font-bold mb-4 text-center">Task Management App</h1>
+        <header> <h1 class="bg-gray-800 p-2 rounded shadow text-white text-2xl font-bold mb-4 text-center">Task Management App</h1></header>
 
         <div class="bg-white p-6 rounded shadow mt-4">
             <h2 class="text-xl font-bold mb-4">Add New Task</h2>
             <form id="taskForm" class="flex flex-wrap items-end space-y-4 space-x-4">
                 <div class="w-full sm:w-auto">
                     <label for="title" class="block font-medium">Title:</label>
-                    <input type="text" id="title" name="title" class="w-full p-2 border rounded" style="width: 150px;">
+                    <input type="text" id="title" name="title" class="w-full p-2 border rounded" style="width: 150px;" required>
                 </div>
                 <div class="w-full sm:w-1/2">
                     <label for="desc" class="block font-medium">Description:</label>
-                    <input type="text" id="desc" name="desc" class="w-full p-2 border rounded">
+                    <input type="text" id="desc" name="desc" class="w-full p-2 border rounded overflow-x-auto whitespace-nowrap" required>
                 </div>
                 <div class="w-full sm:w-auto">
                     <label for="stat" class="block font-medium">Status:</label>
@@ -46,7 +46,8 @@
             <div class="flex items-end space-x-4">
                 <input type="text" id="search" onkeyup="searchTasks()"
                     placeholder="Search by title, description, or status" class="flex-1 p-2 border rounded">
-                <button onclick="clearSearch()" class="bg-gray-300 text-black p-2 rounded hover:bg-red-600 hover:text-white">Clear
+                <button onclick="clearSearch()"
+                    class="bg-gray-300 text-black p-2 rounded hover:bg-red-600 hover:text-white">Clear
                     Search</button>
             </div>
         </div>
@@ -92,7 +93,8 @@
                         </select>
                     </div>
                     <div class="flex justify-between">
-                        <button type="button" onclick="updateTask()" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Update
+                        <button type="button" onclick="updateTask()"
+                            class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Update
                             Task</button>
                         <button type="button" onclick="closeModal()"
                             class="bg-gray-300 text-black p-2 rounded hover:bg-red-600 hover:text-white">Cancel</button>
@@ -102,7 +104,11 @@
             </div>
         </div>
 
+        
     </div>
+    <footer class="w-full p-4 mt-8 bg-gray-800 text-white text-center bottom-0 left-0 right-0 shadow">
+        <p>Developed By M. Hamza Kaleem</p>
+    </footer>
 
     <script src="./main.js"></script>
 </body>

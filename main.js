@@ -1,7 +1,7 @@
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [
             { id: 1, title: 'Studies', description: 'Maths, Physics', status: 'pending' },
             { id: 2, title: 'Learn Skill', description: 'Javascript', status: 'in-progress' },
-            { id: 3, title: 'Break Fast', description: 'Brad and tea', status: 'completed' }
+            { id: 3, title: 'Break Fast', description: 'Bread and tea', status: 'completed' }
         ];
 
         function saveTasks() {
